@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="0"
+    android:stretchColumns="*"> <!-- shrink the first column of the layout-->
+
+
+    <!-- first row of the table layout-->
+    <TableRow
+        android:id="@+id/firstRow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- first element of the first row-->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/backgroundcolor"
+            android:padding="18dip"
+            android:text="Date"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:id="@+id/textView1"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/backgroundcolor"
+            android:padding="18dip"
+            android:text="Duration"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:id="@+id/textView2"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/backgroundcolor"
+            android:padding="18dip"
+            android:text="Event name"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:id="@+id/textView3"/>
+
+
+
+
+    </TableRow>
+</TableLayout>

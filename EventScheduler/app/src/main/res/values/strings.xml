@@ -1,0 +1,8 @@
+<resources>
+    <string name="splashscreen"></string>
+    <string name="mainmenu">Main Menu</string>
+    <string name="settingpage">Settings</string>
+    <string name="aboutpage">About</string>
+    <string name="showalleventspage">Show All Events</string>
+    <string name="userprofilepage">User Profile</string>
+</resources>
