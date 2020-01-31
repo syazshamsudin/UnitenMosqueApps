@@ -41,7 +41,7 @@ public class ShowAllEventsActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.EventListView);
         exampleList = new ArrayList<>();
 
-        //get from DB
+      /*  //get from DB
         String nm;
         try {
             Connection con = DBConnection.CONN();
@@ -65,7 +65,7 @@ public class ShowAllEventsActivity extends AppCompatActivity {
         }
         catch (Exception ex) {
             //error
-        }
+        }*/
 
         adapter = new ArrayAdapter<MasjidEvent>(this,R.layout.adapter_view_layout, exampleList){
             @NonNull

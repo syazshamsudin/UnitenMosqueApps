@@ -3,11 +3,14 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
-    <TextView
-        android:layout_width="wrap_content"
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World"
-        android:textAlignment="center"/>
+        android:text="Turn On Notifications"
+        android:paddingTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"/>
+
+
 </LinearLayout>

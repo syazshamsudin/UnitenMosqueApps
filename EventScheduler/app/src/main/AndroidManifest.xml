@@ -23,19 +23,29 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/settingpage" />
+            android:label="@string/settingpage"
+            android:parentActivityName=".MainMenuActivity"/>
 
         <activity
             android:name=".ShowAllEventsActivity"
-            android:label="@string/showalleventspage" />
+            android:label="@string/showalleventspage"
+            android:parentActivityName=".MainMenuActivity"/>
 
         <activity
             android:name=".AboutActivity"
-            android:label="@string/aboutpage" />
+            android:label="@string/aboutpage"
+            android:parentActivityName=".MainMenuActivity"/>
 
         <activity
             android:name=".UserProfileActivity"
-            android:label="@string/userprofilepage" />
+            android:label="@string/userprofilepage"
+            android:parentActivityName=".MainMenuActivity"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/loginpage"
+            android:parentActivityName=".UserProfileActivity"/>
+
 
 
 

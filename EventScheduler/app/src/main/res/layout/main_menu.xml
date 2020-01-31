@@ -22,15 +22,14 @@
 
             <ImageButton
                 android:id="@+id/show_all_events_button"
-                android:layout_width="200dp"
+                android:layout_width="170dp"
                 android:layout_height="200dp"
-                android:paddingRight="10dp"
                 android:src="@drawable/ic_show_all_events_button"
                 android:background="@color/backgroundcolor"/>
 
             <ImageButton
                 android:id="@+id/user_profile_button"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="200dp"
                 android:background="@color/backgroundcolor"
                 android:src="@drawable/ic_user_profile_button" />
@@ -48,15 +47,15 @@
 
             <ImageButton
                 android:id="@+id/settings_button"
-                android:layout_width="200dp"
+                android:layout_width="170dp"
                 android:layout_height="200dp"
-                android:paddingRight="10dp"
+
                 android:src="@drawable/ic_settings_button"
                 android:background="@color/backgroundcolor" />
 
             <ImageButton
                 android:id="@+id/about_button"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="200dp"
                 android:src="@drawable/ic_about_button"
                 android:background="@color/backgroundcolor"/>

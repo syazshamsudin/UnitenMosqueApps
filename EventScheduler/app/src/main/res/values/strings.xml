@@ -5,4 +5,17 @@
     <string name="aboutpage">About</string>
     <string name="showalleventspage">Show All Events</string>
     <string name="userprofilepage">User Profile</string>
+    <string name="loginpage">Login</string>
+
+
+    <string name="aboutcontext1">UNITEN Mosque Apps is an application designed to help improve daily
+        activity. The expansion and evolution of smart phones technologies have made society more
+        dependent upon mobile application development than ever. Up until today, there is no
+        application that match the purpose of this project. Thus, it is my intention to propose this
+        kind of project, which to help modernize the current system.</string>
+    <string name="aboutcontext2">Most of the people who often came to the UNITEN mosque are having a
+        hard time to gather information regarding the events.  Those people have to go to the mosque
+        to see the upcoming events at the notice board and this kind of thing would be a waste of
+        time. Sometimes, people tend to forget about the event that want to join. Thus, this
+        application will help to notify and remind them.</string>
 </resources>
