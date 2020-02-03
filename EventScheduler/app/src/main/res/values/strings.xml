@@ -1,4 +1,5 @@
 <resources>
+    <string name="appname">UNITEN Mosque Apps</string>
     <string name="splashscreen"></string>
     <string name="mainmenu">Main Menu</string>
     <string name="settingpage">Settings</string>
@@ -6,7 +7,7 @@
     <string name="showalleventspage">Show All Events</string>
     <string name="userprofilepage">User Profile</string>
     <string name="loginpage">Login</string>
-
+    <string name="studentprofilepage1">Student Profile</string>
 
     <string name="aboutcontext1">UNITEN Mosque Apps is an application designed to help improve daily
         activity. The expansion and evolution of smart phones technologies have made society more
