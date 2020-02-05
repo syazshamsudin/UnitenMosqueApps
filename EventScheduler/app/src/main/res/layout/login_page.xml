@@ -8,6 +8,16 @@
     android:background="@color/backgroundcolor"
     tools:context=".LoginActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +46,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvpassword"
+            android:id="@+id/studPassword"
             android:inputType="textPassword"
             android:singleLine="true"
             android:hint="Password"
@@ -49,9 +59,10 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnsignin"
+            android:id="@+id/loginBtn"
             android:layout_marginTop="16dp"
-            android:text="Sign In"
+            android:text="Login"
+            android:onClick="OnLogin"
             android:textColor="@color/black"
             android:textStyle="bold"
             />

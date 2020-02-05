@@ -41,31 +41,7 @@ public class ShowAllEventsActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.EventListView);
         exampleList = new ArrayList<>();
 
-      /*  //get from DB
-        String nm;
-        try {
-            Connection con = DBConnection.CONN();
-            if (con == null) {
-                //no internet connection
-            } else {
 
-                String query = " select * from masjid_event";
-
-                Statement stmt = con.createStatement();
-                // stmt.executeUpdate(query);
-
-                ResultSet rs = stmt.executeQuery(query);
-
-                while (rs.next())
-                {
-                    nm = rs.getString(1);
-                    exampleList.add(new MasjidEvent(nm,"s1","s1"));
-                }
-            }
-        }
-        catch (Exception ex) {
-            //error
-        }*/
 
         adapter = new ArrayAdapter<MasjidEvent>(this,R.layout.adapter_view_layout, exampleList){
             @NonNull

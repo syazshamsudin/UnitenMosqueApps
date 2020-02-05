@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "963344309803",
+    "firebase_url": "https://unitenmosqueapps.firebaseio.com",
+    "project_id": "unitenmosqueapps",
+    "storage_bucket": "unitenmosqueapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963344309803:android:2ccd755838408b3e3f146e",
+        "android_client_info": {
+          "package_name": "com.example.eventscheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963344309803-p51kmoftsssr58al69jurnktdvuu8u3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eventscheduler",
+            "certificate_hash": "5dae92b2fdbdf68db435973bdd1ee90c3fa206fb"
+          }
+        },
+        {
+          "client_id": "963344309803-uoitq4iqvpsujcduauura1a4ren5pnbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAktqswq9jABrcBiXe5kqcL2FdE4AQl-lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963344309803-uoitq4iqvpsujcduauura1a4ren5pnbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
