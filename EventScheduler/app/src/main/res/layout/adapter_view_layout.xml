@@ -6,11 +6,62 @@
     android:stretchColumns="*"> <!-- shrink the first column of the layout-->
 
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="0"
+        android:stretchColumns="*">
+
+        <!-- first row of the table layout-->
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- first element of the first row-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/backgroundcolor"
+                android:padding="18dip"
+                android:text="Date"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:id="@+id/textView1"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/backgroundcolor"
+                android:padding="18dip"
+                android:text="Duration"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:id="@+id/textView2"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/backgroundcolor"
+                android:padding="18dip"
+                android:text="Event name"
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:id="@+id/textView3"/>
+
+
+
+        </TableRow>
+
+
+
     <!-- first row of the table layout-->
     <TableRow
-        android:id="@+id/firstRow"
+        android:id="@+id/secondRow"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:shrinkColumns="0"
+        android:stretchColumns="*">
 
         <!-- first element of the first row-->
         <TextView
@@ -20,8 +71,8 @@
             android:padding="18dip"
             android:text=""
             android:textColor="#000"
-            android:textSize="18dp"
-            android:id="@+id/textView1"/>
+            android:textSize="10dp"
+            android:id="@+id/date"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -30,8 +81,8 @@
             android:padding="18dip"
             android:text=""
             android:textColor="#000"
-            android:textSize="18dp"
-            android:id="@+id/textView2"/>
+            android:textSize="10dp"
+            android:id="@+id/duration"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -40,11 +91,12 @@
             android:padding="18dip"
             android:text=""
             android:textColor="#000"
-            android:textSize="18dp"
-            android:id="@+id/textView3"/>
+            android:textSize="10dp"
+            android:id="@+id/eventname"/>
 
 
 
 
     </TableRow>
+    </TableLayout>
 </TableLayout>

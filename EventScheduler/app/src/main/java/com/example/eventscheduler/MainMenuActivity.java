@@ -21,6 +21,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenuActivity.this, ShowAllEventsActivity.class));
+                finish();
             }
 
         });
@@ -31,6 +32,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenuActivity.this, UserProfileActivity.class));
+                finish();
             }
 
         });
@@ -40,6 +42,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenuActivity.this, SettingsActivity.class));
+                finish();
             }
 
         });
@@ -49,6 +52,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenuActivity.this, AboutActivity.class));
+                finish();
             }
 
         });

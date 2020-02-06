@@ -1,7 +1,11 @@
 package com.example.eventscheduler;
 
+import android.content.Intent;
 import android.icu.text.Transliterator;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,17 +24,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.net.MalformedURLException;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShowAllEventsActivity extends AppCompatActivity {
     @BindView(R.id.EventListView) ListView listView;
     //ListView listView;
-    public ArrayList<MasjidEvent> exampleList;
-    public ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,48 +47,75 @@ public class ShowAllEventsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         listView = (ListView) findViewById(R.id.EventListView);
-        exampleList = new ArrayList<>();
 
-
-
-        adapter = new ArrayAdapter<MasjidEvent>(this,R.layout.adapter_view_layout, exampleList){
-            @NonNull
+        final BackgroundWorker backgroundworker = new BackgroundWorker(new BackgroundWorker.AsyncResponse() {
             @Override
-            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            public void processFinish(String output) {
+                Toast t = Toast.makeText(ShowAllEventsActivity.this,output,Toast.LENGTH_LONG);
+                t.setGravity(Gravity.CENTER, 0, 0);
+                t.show();
 
-                String event_name = getItem(position).getEvent_name();
-                String date = getItem(position).getDate();
-                String duration = getItem(position).getDuration();
-
-                MasjidEvent event = new MasjidEvent(event_name,date,duration);
-
-                LayoutInflater inflater = LayoutInflater.from(this.getContext());
-                convertView = inflater.inflate(R.layout.adapter_view_layout,parent,false);
-
-                TextView event_name_view = (TextView) convertView.findViewById(R.id.textView3);
-                TextView date_view = (TextView) convertView.findViewById(R.id.textView1);
-                TextView duration_view = (TextView) convertView.findViewById(R.id.textView2);
-
-
-                event_name_view.setText(event_name);
-                date_view.setText(date);
-                duration_view.setText(duration);
+                String[] strsplit1 = output.split(";");
 
 
 
-                return convertView;
-            }
-        };
+                ArrayList<MasjidEvent> event_list = new ArrayList<>();
+                ArrayAdapter adapter;
 
-        listView.setAdapter(adapter);
+                for (int i = 0; i < strsplit1.length; i++){
+                    String[] strsplit2 = strsplit1[i].split(",");
+                    MasjidEvent event = new MasjidEvent(strsplit2[1],strsplit2[2],strsplit2[3]);
+                    event_list.add(event);
+                    //Toast.makeText(ShowAllEventsActivity.this,strall[i] ,Toast.LENGTH_LONG).show();
+                }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i==1)
-                    Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_SHORT).show();
+                adapter = new ArrayAdapter<MasjidEvent>(getApplicationContext(),R.layout.adapter_view_layout, event_list){
+                    @NonNull
+                    @Override
+                    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+                        String event_name = getItem(position).getEvent_name();
+                        String date = getItem(position).getDate();
+                        String duration = getItem(position).getDuration();
+
+
+
+                        LayoutInflater inflater = LayoutInflater.from(this.getContext());
+                        convertView = inflater.inflate(R.layout.adapter_view_layout,parent,false);
+
+                        TextView event_name_view = (TextView) convertView.findViewById(R.id.eventname);
+                        TextView date_view = (TextView) convertView.findViewById(R.id.date);
+                        TextView duration_view = (TextView) convertView.findViewById(R.id.duration);
+
+
+                        event_name_view.setText(event_name);
+                        date_view.setText(date);
+                        duration_view.setText(duration);
+
+
+
+                        return convertView;
+                    }
+                };
+
+                listView.setAdapter(adapter);
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                            Toast.makeText(getApplicationContext(),"This event was added to your schedule..",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(ShowAllEventsActivity.this, MainMenuActivity.class));
+                            finish();
+                    }
+                });
+
             }
         });
+        backgroundworker.execute("showallevent");
 
     }
+
+
+
 }
